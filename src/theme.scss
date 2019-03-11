@@ -1,0 +1,116 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$md-primary: (
+  50 : #e4f0f3,
+  100 : #bbd9e2,
+  200 : #8ec0cf,
+  300 : #60a7bb,
+  400 : #3e94ad,
+  500 : #1c819e,
+  600 : #197996,
+  700 : #146e8c,
+  800 : #116482,
+  900 : #095170,
+  A100 : #a1dfff,
+  A200 : #6eceff,
+  A400 : #3bbcff,
+  A700 : #22b4ff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$md-accent: (
+  50 : #e0ebe8,
+  100 : #b3ccc6,
+  200 : #80aaa1,
+  300 : #4d887b,
+  400 : #266f5e,
+  500 : #005542,
+  600 : #004e3c,
+  700 : #004433,
+  800 : #003b2b,
+  900 : #002a1d,
+  A100 : #64ffc2,
+  A200 : #31ffae,
+  A400 : #00fd9a,
+  A700 : #00e48a,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$md-warn: (
+  50 : #fff7e0,
+  100 : #ffecb3,
+  200 : #ffdf80,
+  300 : #ffd24d,
+  400 : #ffc826,
+  500 : #ffbe00,
+  600 : #ffb800,
+  700 : #ffaf00,
+  800 : #ffa700,
+  900 : #ff9900,
+  A100 : #ffffff,
+  A200 : #fff9f2,
+  A400 : #ffe3bf,
+  A700 : #ffd7a6,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+
+
+$my-theme-primary: mat-palette($md-primary);
+$my-theme-accent : mat-palette($md-accent);
+$my-theme-warn   : mat-palette($md-warn);
+
+$my-theme: mat-light-theme(
+    $my-theme-primary,
+    $my-theme-accent,
+    $my-theme-warn
+);
+
+// include the custom theme object into the angular material theme
+@include angular-material-theme($my-theme);

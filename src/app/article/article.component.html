@@ -1,0 +1,18 @@
+<mat-expansion-panel class="flex-item">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      {{article.title}}
+    </mat-panel-title>
+    <mat-panel-description>
+      <button (click)="editArticle($event)" class="icons" mat-icon-button>
+        <mat-icon color="warn">edit</mat-icon>
+      </button>
+
+      <button (click)="deleteArticle($event)" class="icons" mat-icon-button>
+        <mat-icon color="warn">delete</mat-icon>
+      </button>
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+
+  <p id="desc">{{article.description}}</p>
+</mat-expansion-panel>
